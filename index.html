@@ -3,210 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROXX MEDIA GROUP (RMG) | ELITE SOUND ENGINEERING</title>
-    
+    <title>Roxx Media Group | Elite Audio Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
     <style>
-        /* RMG BRAND COLORS: Deep Black, Crisp White, Waveform Yellow */
-        :root {
-            --bg-color: #000000;
-            --bg-accent: #0a0a0a;
-            --accent-yellow: #f1c40f; /* From your waveform logo */
-            --text-main: #ffffff;
-            --text-dim: #a0a0a0;
-            
-            /* YOUR PREFERRED MODERN FONT */
-            --modern-font: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--modern-font);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* HEADING STYLES - Modern, bold, all-caps, spread */
-        h1, h2, h3 {
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 4px; /* Spread out widely like requested */
-            margin-bottom: 0.5em;
-        }
-
-        /* NAVIGATION - Stark Lake Style but modern Inter font */
-        header {
-            background-color: #000;
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        .main-logo {
-            width: 280px;
-            margin-bottom: 25px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 13px;
-            margin: 0 20px;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent-yellow);
-        }
-
-        /* MAIN CONTENT CONTAINER */
-        .content-wrap {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        /* ABOUT SECTION */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            margin-bottom: 120px;
-            border-bottom: 1px solid #1a1a1a;
-            padding-bottom: 80px;
-        }
-
-        .about-title {
-            font-size: 42px;
-            border-bottom: 3px solid var(--accent-yellow);
-            display: inline-block;
-            margin-bottom: 40px;
-        }
-
-        .about-text p {
-            color: var(--text-dim);
-            font-size: 18px;
-            margin-bottom: 25px;
-            font-weight: 300;
-        }
-
-        /* PRO TOUCH-UP RENDER STYLE */
-        .pro-photo {
-            filter: grayscale(10%) brightness(85%);
-            transition: 0.6s ease;
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; scroll-behavior: smooth; }
+        .gold-text { color: #FFD700; }
+        .gold-bg { background-color: #FFD700; }
+        
+        /* Full Width Images */
+        .studio-full-img {
             width: 100%;
             height: auto;
-            border: 1px solid #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            filter: brightness(90%);
+            transition: 0.5s;
         }
+        .studio-full-img:hover { filter: brightness(100%); }
 
-        .pro-photo:hover {
-            filter: grayscale(0%) brightness(100%);
+        /* Gear List Styling */
+        .gear-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #222;
+            padding: 2rem;
+            transition: 0.3s;
         }
-
-        /* STUDIO SECTIONS */
-        .studio-full-width {
-            margin-bottom: 100px;
-            position: relative;
-        }
-
-        .studio-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .studio-header h2 {
-            font-size: 36px;
-        }
-
-        .studio-description {
-            color: var(--text-dim);
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* GRID SYSTEM (Used in B & C) */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-            gap: 20px;
-        }
-
-        /* LOGO IN-ROOM EFFECT */
-        .logo-stamp {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            max-width: 80px; /* Small, clear logo */
-            opacity: 0.8;
-            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: var(--bg-accent);
-            padding: 60px 30px;
-            text-align: center;
-            border-top: 1px solid #1a1a1a;
-            font-size: 11px;
-            color: #666;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        .gear-card:hover { border-color: #FFD700; }
     </style>
 </head>
-<body>
+<body class="text-gray-100">
 
-<header>
-    <div class="main-logo-container">
-        <img src="RMG_FINAL_WHITE_YELLOW.png" alt="RMG Media Group" class="main-logo">
-    </div>
-    <nav>
-        <a href="#about">About RMG</a>
-        <a href="#studio-a">Studio A</a>
-        <a href="#studio-b">Studio B</a>
-        <a href="#studio-c">Studio C</a>
-        <a href="#amenities">Facilities</a>
-        <a href="#contact">Book</a>
-    </nav>
-</header>
-
-<div class="content-wrap">
-    
-    <section id="about" class="about-grid">
-        <div class="about-content">
-            <h1 class="about-title">The Standard of Sound</h1>
-            <div class="about-text">
-                <p>RMG Media Group is a elite audio production facility, purpose-built for clarity, power, and sonic innovation. We offer a sophisticated, three-tier environment meticulously designed by engineers, for engineers.</p>
-                <p>Our philosophy merges classic analog warmth with surgical digital precision, ensuring that from large-format tracking in Studio A to precise mastering in Studio C, your sound is realized exactly as intended.</p>
+    <nav class="sticky top-0 z-50 bg-black/95 border-b border-zinc-800">
+        <div class="flex justify-between items-center p-5 max-w-7xl mx-auto">
+            <div class="text-xl font-black tracking-widest gold-text uppercase italic">Roxx Media Group</div>
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wider">
+                <a href="#about" class="hover:text-yellow-500 transition">About</a>
+                <a href="#studios" class="hover:text-yellow-500 transition">Studios</a>
+                <a href="#gear" class="hover:text-yellow-500 transition">The Gear</a>
+                <a href="#book" class="gold-bg text-black px-4 py-2 rounded font-black hover:bg-yellow-400">Book Session</a>
             </div>
         </div>
-        <div>
-            <div class="full-view-card">
-                <img src="IMG_0176_PRO_TOUCHUP.jpg" class="pro-photo" alt="RMG Team">
+    </nav>
+
+    <header class="min-h-[70vh] flex items-center justify-center text-center px-6 bg-black relative">
+        <div class="max-w-4xl z-10">
+            <h1 class="text-7xl md:text-9xl font-black mb-6 uppercase italic tracking-tighter">Pure <span class="gold-text">Sound.</span></h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 font-light tracking-widest uppercase">SSL Trained • 500 Series Certified • Elite Mixing</p>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-zinc-900 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-6 uppercase italic">The Engineer</h2>
+                <div class="w-20 h-1 gold-bg mb-6"></div>
+                <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                    Trained at the highest level, I graduate with extensive experience on <strong>Large Format SSL Consoles</strong>, <strong>500 Series Signal Chains</strong>, and premium <strong>Outboard Gear</strong>.
+                </p>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    At Roxx Media Group, we don't just "process" audio—we architect it. Using a hybrid of analog warmth and surgical digital precision, we ensure your records stand up against the biggest names in the industry.
+                </p>
+            </div>
+            <div class="relative">
+                <img src="IMG_0176.jpg" alt="Roxx Media Group Session" class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition duration-700 border border-zinc-700">
+                <div class="absolute -bottom-4 -right-4 gold-bg text-black p-4 font-black italic">TOP OF CLASS</div>
             </div>
         </div>
     </section>
 
-    <section id="studio-a" class="studio-full-width">
-        <div class="studio-header">
-            <h2>STUDIO A</h2>
-            <div class="studio-description">Flagship Large Format Recording • 80-Channel SSL Console</div>
+    <section id="studios" class="bg-black">
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2000" class="studio-full-img" alt="Studio A - SSL Console">
+            <div class="absolute bottom-10 left-10 bg-black/80 p-6 border-l-4 border-yellow-500">
+                <h3 class="text-3xl font-black uppercase italic">Studio A: The Flagship</h3>
+                <p class="text-gray-400 tracking-widest uppercase text-sm">Large Format SSL • Grand Tracking • Custom Vocal Booth</p>
+            </div>
         </div>
-        <div class="studio-card">
-            <img src="STUDIO_A_FULL_VIEW_SSL.jpg" alt="Studio A Large Format SSL Console" class="pro-photo">
-            <img src="RMG_FINAL_WHITE_YELLOW.png" class="logo-stamp" alt="RMG Logo Stamp">
+
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=2000" class="studio-full-img" alt="Studio B - Production Suite">
+            <div class="absolute bottom-10 right-10 text-right bg-black/80 p-6 border-r-4 border-yellow-500">
+                <h3 class="text-3xl font-black uppercase italic">Studio B: Production</h3>
+                <p class="text-gray-400 tracking-widest uppercase text-sm">Hybrid Mix Environment • 500 Series Integration • Isolation Booth</p>
+            </div>
         </div>
-        <div class="gallery-grid" style="margin-
+
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?q=80&w=2000" class="studio-full-img" alt="Studio C - Mastering Lab">
+            <div class="absolute bottom-10 left-10 bg-black/80 p-6 border-l-4 border-yellow-500">
+                <h3 class="text-3xl font-black uppercase italic">Studio C: Mastering</h3>
+                <p class="text-gray-400 tracking-widest uppercase text-sm">Surgical Acoustic Lab • Dedicated Analog Mastering Chain</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gear" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 uppercase italic text-center">The Arsenal</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="gear-card">
+                <h3 class="text-xl font-bold gold-text mb-6 uppercase tracking-widest">Hardware</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li><span class="text-white font-bold">Interface:</span> Apollo Twin</li>
+                    <li><span class="text-white font-bold">Microphones:</span> Neumann TLM 103, AKG C214</li>
+                    <li><span class="text-white font-bold">Monitors:</span> Yamaha HS5 Studio Monitors</li>
+                    <li><span class="text-white font-bold">Monitoring:</span> Beyerdynamic Headphones</li>
+                </ul>
+            </div>
+            <div class="gear-card">
+                <h3 class="text-xl font-bold gold-text mb-6 uppercase tracking-widest">Software & Processing</h3>
+                <p class="text-sm text-gray-500 mb-4 uppercase">Industry Leading Plugins</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-zinc-800 px-3 py-1 text-xs font-bold rounded">WAVES</span>
+                    <span class="bg-zinc-800 px-3 py-1 text-xs font-bold rounded">PLUGIN ALLIANCE</span>
+                    <span class="bg-zinc-800 px-3 py-1 text-xs font-bold rounded">FABFILTER</span>
+                    <span class="bg-zinc-800 px-3 py-1 text-xs font-bold rounded">SOFTUBE</span>
+                    <span class="bg-zinc-800 px-3 py-1 text-xs font-bold rounded">SLATE DIGITAL</span>
+                    <span class="bg-zinc-800 px-3 py-1 text-xs font-bold rounded">ANTARES AUTOTUNE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="py-24 bg-zinc-900 px-6 text-center">
+        <h2 class="text-4xl font-black mb-12 uppercase italic">Book Your Session</h2>
+        
+        <div class="bg-white rounded-lg overflow-hidden shadow-2xl max-w-4xl mx-auto mb-16">
+            <div class="p-6 text-black font-black uppercase border-b tracking-tighter">Secure Your Slot</div>
+            <div class="h-[450px] flex items-center justify-center bg-gray-100">
+                <p class="text-black">Insert Calendly Embed Code Here</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Payment Options</p>
+            <div class="flex gap-10 opacity-40 grayscale">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-6" alt="Paypal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" class="h-6" alt="Mastercard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-6" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Zelle_logo.svg" class="h-6" alt="Zelle">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-zinc-800 text-center text-gray-600 text-[10px] tracking-[0.4em] uppercase">
+        &copy; 2026 Roxx Media Group | SSL Trained | First Institute Florida
+    </footer>
+
+</body>
+</html>
