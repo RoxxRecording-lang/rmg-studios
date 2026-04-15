@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMG MEDIA GROUP | PREMIER RECORDING & MASTERING</title>
+    <style>
+        /* RMG BRAND COLORS: Deep Black, Crisp White, Waveform Yellow */
+        :root {
+            --bg-color: #000000;
+            --container-bg: #0a0a0a;
+            --accent-yellow: #f1c40f; 
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --serif-font: 'Georgia', Times, serif;
+            --sans-font: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--sans-font);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION - STARKE LAKE STYLE */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .main-logo {
+            width: 280px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-yellow);
+        }
+
+        /* HERO / ABOUT SECTION */
+        .content-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .about-title {
+            font-family: var(--serif-font);
+            font-size: 42px;
+            font-style: italic;
+            border-bottom: 2px solid var(--accent-yellow);
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            color: var(--text-dim);
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        /* STUDIO GRID SYSTEM */
+        .studio-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .studio-header h2 {
+            font-family: var(--serif-font);
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .studio-card {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .studio-card img {
+            width: 100%;
+            display: block;
+            filter: grayscale(20%) brightness(80%);
+            transition: 0.5s ease;
+        }
+
+        .studio-card:hover img {
+            filter: grayscale(0%) brightness(100%);
+            transform: scale(1.02);
+        }
+
+        .label-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-left: 3px solid var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid #1a1a1a;
+            color: var(--text-dim);
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="RMG_FINAL_WHITE_YELLOW.png" alt="RMG Media Group" class="main-logo">
+    <nav>
+        <a href="#about">About</a>
+        <a href="#studio-a">Studio A</a>
+        <a href="#studio-b">Studio B</a>
+        <a href="#studio-c">Studio C</a>
+        <a href="#amenities">Lounge</a>
+    </nav>
+</header>
+
+<div class="content-wrap">
+    
+    <section id="about" class="about-section">
+        <div>
+            <h1 class="about-title">The Standard of Sound</h1>
+            <div class="about-text">
+                <p>RMG Media Group is a multi-room, world-class recording and production facility designed to meet the demands of the modern music industry. We provide an environment where technical precision meets creative comfort.</p>
+                <p>From large-format analog tracking to surgical digital mastering, our rooms are tuned to perfection, ensuring that your vision is translated exactly as intended.</p>
+            </div>
+        </div>
+        <div>
+            <div class="studio-card">
+                <img src="IMG_0176_PRO_TOUCHUP.jpg" alt="RMG Team">
+            </div>
+        </div>
+    </section>
+
+    <section id="studio-a">
+        <div class="studio-header">
+            <h2>STUDIO A</h2>
+            <p style="color:var(--accent-yellow)">Flagship Large Format Recording</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000" alt="Studio A SSL">
+                <div class="label-overlay">Large Format Console</div>
+            </div>
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1525362081669-2b476bb628c3?q=80&w=1000" alt="Studio A Vocal Booth">
+                <div class="label-overlay">Vocal Suite A</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="studio-b">
+        <div class="studio-header">
+            <h2>STUDIO B</h2>
+            <p style="color:var(--accent-yellow)">Hybrid Production & Mix Suite</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=1000" alt="Studio B">
+                <div class="label-overlay">Control Room B</div>
+            </div>
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1461784121038-f5883bd3e5df?q=80&w=1000" alt="Studio B Booth">
+                <div class="label-overlay">Iso Booth B</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="studio-c">
+        <div class="studio-header">
+            <h2>STUDIO C</h2>
+            <p style="color:var(--accent-yellow)">Surgical Mastering Suite</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1000" alt="Mastering Studio">
+                <div class="label-overlay">Mastering Lab</div>
+            </div>
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1000" alt="Gear Rack">
+                <div class="label-overlay">Analog Chain</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities">
+        <div class="studio-header">
+            <h2>THE LOUNGE</h2>
+            <p style="color:var(--accent-yellow)">Artist Comfort & Connectivity</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1000" alt="Lounge">
+                <div class="label-overlay">Main Lobby</div>
+            </div>
+            <div class="studio-card">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000" alt="Kitchen Area">
+                <div class="label-overlay">Amenities</div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>RMG MEDIA GROUP &copy; 2024 | ALL RIGHTS RESERVED</p>
+    <p>DESIGNED FOR SONIC EXCELLENCE</p>
+</footer>
+
+</body>
+</html>
